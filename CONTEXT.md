@@ -56,6 +56,14 @@ It is NOT a source of business requirements. PRD.md remains authoritative.
 - [ ] Phase 11 — Audit Trail
 - [ ] Phase 12 — Stabilization
 
+## Database:
+- PRD specifies MySQL.
+- .env.example uses DB_CONNECTION=mysql.
+- Development database is provided by XAMPP.
+- Database server reports MariaDB 10.4.32.
+- WSL can connect to the database through 127.0.0.1:3306.
+- Laravel successfully executed the initial migrations.
+
 ## Active task
 
 None.
