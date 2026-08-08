@@ -1,0 +1,158 @@
+We are beginning Phase 1 — Foundation.
+
+This task is LIMITED to verifying and completing the project foundation.
+
+Do NOT implement any financial domain feature yet.
+
+## REQUIRED DOCUMENTATION
+
+Before making any changes, read:
+
+* PRD.md
+* AI_RULES.md
+* FINANCIAL_INVARIANTS.md
+* FINANCIAL_TEST_MATRIX.md
+* IMPLEMENTATION_PLAN.md
+* TASK_PROTOCOL.md
+* CONTEXT.md
+* README_AI.md
+
+PRD.md remains the authoritative source of business requirements.
+
+## VERIFIED ENVIRONMENT
+
+The developer has already verified locally:
+
+* Laravel boots successfully.
+* PHP CLI version is 8.5.4.
+* PHPUnit works.
+* Baseline tests pass: 2 tests, 2 assertions.
+* The repository is on `main`.
+* The Git working tree is clean at the latest checkpoint.
+* `.env.example` uses `DB_CONNECTION=mysql`.
+* The development database is provided by XAMPP on Windows.
+* The database server reports MariaDB 10.4.32.
+* WSL can connect to the database through `127.0.0.1:3306`.
+* `php artisan migrate` has successfully created the default Laravel migration tables.
+
+Do NOT replace the database server.
+Do NOT install MySQL Server.
+Do NOT install another database server.
+Do NOT change the developer's local database setup.
+
+## OBJECTIVE
+
+Inspect the current repository and determine whether the Laravel foundation is correctly prepared for Phase 1 implementation.
+
+Verify:
+
+1. Laravel application structure.
+2. Composer configuration.
+3. Database configuration files.
+4. Existing migrations.
+5. Authentication-related Laravel foundation.
+6. Existing routes.
+7. Existing test structure.
+8. Frontend/build configuration.
+9. Whether any dependency required by the documented Phase 1 foundation is missing.
+
+Compare the repository against the requirements in the documentation.
+
+## IMPORTANT
+
+Do not implement authentication yet.
+
+Do not create financial models.
+
+Do not create financial migrations.
+
+Do not create Account, Income, Expense, Transfer, Loan, Asset, Receivable, or Payable functionality.
+
+Do not create dashboard or reporting functionality.
+
+Do not implement business logic.
+
+## ALLOWED CHANGES
+
+Only make changes that are strictly necessary to establish the generic Laravel foundation required before Authentication.
+
+Examples of potentially acceptable foundation changes:
+
+* correcting an objectively incorrect configuration;
+* adding a required non-financial foundation dependency if the documentation explicitly requires it;
+* correcting a foundation-level test setup;
+* correcting an obvious Laravel bootstrap/configuration issue.
+
+If no foundation change is required, make NO code changes.
+
+Do not make speculative improvements.
+
+## DATABASE COMPATIBILITY
+
+The documented target database is MySQL.
+
+The verified development database currently reports:
+
+MariaDB 10.4.32
+
+Do not silently change the documented database requirement.
+
+Do not introduce MySQL-specific features unless explicitly supported by the project documentation and compatible with the verified development environment.
+
+If there is a meaningful compatibility concern between the documented MySQL target and the current MariaDB development environment, report it instead of inventing a solution.
+
+## TESTING
+
+Before finishing:
+
+1. Run the existing test suite.
+2. Do not delete or weaken existing tests.
+3. Do not modify tests merely to make failures disappear.
+4. If tests fail because of environment configuration that cannot be reproduced in your environment, report the failure clearly.
+5. If you make code/configuration changes, run the relevant tests again.
+
+## OUTPUT
+
+At the end, report exactly:
+
+### 1. Foundation Audit
+
+What is already correct.
+
+### 2. Issues Found
+
+Only actual issues supported by repository evidence.
+
+### 3. Changes Made
+
+List every file changed.
+
+If no changes were necessary, explicitly state:
+
+"No repository changes were necessary."
+
+### 4. Tests
+
+Report the exact test command and result.
+
+### 5. Database
+
+Report what can be determined about the database configuration.
+
+Do not claim the Replit environment has access to the developer's local XAMPP database unless you actually verified it.
+
+### 6. Phase 1 Readiness
+
+Answer:
+
+"Is the repository ready to begin the Authentication task?"
+
+Answer YES or NO, followed by a concise reason.
+
+## FINAL RULE
+
+Do not continue into Authentication automatically.
+
+Stop after this task.
+
+Wait for further instructions.
