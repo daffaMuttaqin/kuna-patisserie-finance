@@ -1,0 +1,288 @@
+You are the primary engineering agent for the Kuna Patisserie Finance Management project.
+
+This is an ANALYSIS AND UNDERSTANDING task only.
+
+DO NOT modify the repository.
+DO NOT create files.
+DO NOT delete files.
+DO NOT edit files.
+DO NOT install packages.
+DO NOT run migrations that modify the database.
+DO NOT refactor anything.
+DO NOT implement any feature.
+
+Your first responsibility is to understand the existing project and verify that your understanding is consistent with the project documentation.
+
+## REQUIRED DOCUMENTATION
+
+Read these files completely before producing your analysis:
+
+1. PRD.md
+2. AI_RULES.md
+3. FINANCIAL_INVARIANTS.md
+4. FINANCIAL_TEST_MATRIX.md
+5. IMPLEMENTATION_PLAN.md
+6. TASK_PROTOCOL.md
+7. CONTEXT.md
+8. README_AI.md
+
+These documents are part of the repository and must be treated as project documentation.
+
+PRD.md is the authoritative source of business requirements.
+
+If any companion document conflicts with PRD.md, do not silently resolve the conflict. Report it.
+
+## INSPECT THE EXISTING CODEBASE
+
+After reading the documentation, inspect the existing Laravel project.
+
+At minimum inspect:
+
+* app/
+* database/
+* resources/
+* routes/
+* tests/
+* composer.json
+* package.json
+* relevant configuration files
+
+Determine what is actually implemented.
+
+Do not assume that a feature exists simply because it is described in the PRD.
+
+## REQUIRED REPORT
+
+Produce an analysis report with exactly these sections.
+
+### 1. Project Understanding
+
+Explain:
+
+* what Kuna Patisserie Finance Management is;
+* what problem it solves;
+* the V1 accounting/financial model;
+* the scope of V1;
+* the explicit non-goals.
+
+### 2. Technology and Architecture
+
+Identify:
+
+* backend framework;
+* database;
+* frontend technologies;
+* testing framework;
+* important architectural patterns required by the documentation.
+
+Clearly distinguish:
+
+A. What already exists in the repository.
+
+B. What the documentation requires but is not yet implemented.
+
+### 3. Current Repository State
+
+For each area below, classify it as:
+
+* Not implemented
+* Partially implemented
+* Implemented
+* Cannot be determined
+
+Areas:
+
+* Authentication
+* Accounts
+* Menu Items
+* Income
+* Expenses
+* Payment Confirmation
+* Cancellation
+* Editing
+* Transfers
+* Receivables
+* Payables
+* Loans
+* Assets
+* Dashboard
+* Reports
+* CSV Export
+* Audit Trail
+* Financial Tests
+
+For every classification, provide evidence from the actual repository.
+
+### 4. Financial Model Verification
+
+Demonstrate your understanding of the documented financial model.
+
+Explain the financial effects of each scenario:
+
+#### A. Paid Income
+
+Explain the effect on:
+
+* account/cash balance
+* Revenue
+* COGS
+* Operating Expense
+* Gross Profit
+* Net Profit
+* Receivables
+
+#### B. Unpaid Income
+
+Explain what changes and what does not change.
+
+#### C. Paid Expense
+
+Explain the financial effect.
+
+#### D. Unpaid Expense
+
+Explain the financial effect.
+
+#### E. Transfer
+
+Explain the effect on:
+
+* source account
+* destination account
+* total Current Balance
+* Revenue
+* Expense
+* Profit
+
+#### F. Loan Principal Received
+
+Explain the effect on:
+
+* cash
+* Revenue
+* Profit
+* loan liability
+
+#### G. Loan Principal Repayment
+
+Explain the effect on:
+
+* cash
+* Expense
+* Profit
+* loan liability
+
+#### H. Asset Purchase
+
+Explain the V1 treatment.
+
+Do not invent accounting behavior that is not supported by the documentation.
+
+### 5. Financial Invariants
+
+Read FINANCIAL_INVARIANTS.md and list every mandatory invariant.
+
+For each invariant:
+
+* state the rule;
+* explain what kind of implementation bug would violate it.
+
+Do not add new invariants.
+
+### 6. Financial Test Matrix
+
+Read FINANCIAL_TEST_MATRIX.md.
+
+Summarize the mandatory financial tests.
+
+For each major test area, identify whether the repository already contains corresponding tests.
+
+Do not create or modify tests.
+
+### 7. Implementation Phase
+
+Read IMPLEMENTATION_PLAN.md and determine:
+
+* the current implementation phase;
+* why you believe that is the correct phase;
+* which phase should NOT be started yet, if prerequisites are incomplete.
+
+### 8. Critical Financial Risks
+
+Identify the most dangerous implementation risks for this project.
+
+Pay particular attention to:
+
+* duplicate financial effects;
+* duplicate payment confirmation;
+* cancellation/reversal errors;
+* editing already-paid transactions;
+* transfer errors;
+* insufficient-balance transfers;
+* loan principal incorrectly treated as Revenue or Expense;
+* receivable/payable double counting;
+* trusting client-calculated financial amounts;
+* missing database transactions;
+* race conditions;
+* historical transaction mutation.
+
+Only report risks supported by the project documentation.
+
+### 9. Documentation vs Implementation
+
+Identify discrepancies between:
+
+* PRD.md;
+* companion documentation;
+* actual repository implementation.
+
+Do not fix anything.
+
+If there are no discrepancies you can establish, say so explicitly.
+
+If something cannot be determined, say "Cannot be determined" rather than guessing.
+
+### 10. Recommended First Task
+
+Recommend EXACTLY ONE small, bounded implementation task.
+
+The task must:
+
+* belong to the appropriate current implementation phase;
+* have a clear acceptance criterion;
+* be independently testable;
+* avoid unrelated features;
+* avoid implementing multiple phases at once.
+
+Do not implement this task.
+
+### 11. Verification
+
+End with:
+
+* Documentation read
+* Repository areas inspected
+* Current implementation phase
+* Current test status
+* Recommended first task
+
+Then explicitly state:
+
+"PRD.md remains the authoritative source of business requirements."
+
+## ABSOLUTE RULES
+
+* Do not guess.
+* Do not invent requirements.
+* Do not change financial formulas.
+* Do not modify the repository.
+* Do not install dependencies.
+* Do not run destructive database commands.
+* Do not implement anything.
+* Do not claim a feature exists without repository evidence.
+* If documentation and implementation disagree, report the discrepancy.
+* If information is missing, explicitly say that it is missing.
+
+Accuracy is more important than confidence.
+
+This task is an evaluation of your understanding of the project before implementation begins.

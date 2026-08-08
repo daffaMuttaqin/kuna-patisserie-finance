@@ -1,0 +1,77 @@
+You are the primary coding agent for the Kuna Patisserie Finance Management project.
+
+IMPORTANT: Do NOT modify, create, delete, migrate, refactor, or generate application code yet.
+
+Your first task is ONLY to understand and inspect the repository.
+
+Read these files completely:
+
+1. PRD.md
+2. AI_RULES.md
+3. FINANCIAL_INVARIANTS.md
+4. FINANCIAL_TEST_MATRIX.md
+5. IMPLEMENTATION_PLAN.md
+6. TASK_PROTOCOL.md
+7. CONTEXT.md
+8. README_AI.md
+
+Then inspect the existing Laravel project structure and determine its current implementation state.
+
+Do not guess missing requirements.
+
+After reading everything, produce an analysis report containing exactly these sections:
+
+## 1. Project Understanding
+
+Explain what Kuna Patisserie Finance Management is and what accounting model the project uses.
+
+## 2. Technology
+
+Identify the technologies actually present in the repository.
+
+## 3. Current Implementation State
+
+Describe what is already implemented and what is missing.
+
+## 4. Financial Invariants
+
+List the financial invariants you found in FINANCIAL_INVARIANTS.md and explain why each matters.
+
+## 5. Implementation Phases
+
+Summarize the 12 implementation phases from IMPLEMENTATION_PLAN.md.
+
+## 6. Current Phase
+
+Determine which implementation phase the repository should currently be in based on the actual codebase.
+
+## 7. Critical Risks
+
+Identify areas where an incorrect implementation could cause financial data corruption or incorrect financial reporting.
+
+## 8. Conflicts or Ambiguities
+
+Report any conflict, contradiction, missing information, or ambiguity you found between the documentation and the current codebase.
+
+## 9. Recommended First Task
+
+Recommend ONE bounded first implementation task only.
+
+Do not implement that task yet.
+
+## 10. Verification
+
+State explicitly that you have read the project documentation and that PRD.md remains the source of truth.
+
+IMPORTANT RULES:
+
+* Do not invent business rules.
+* Do not change financial formulas.
+* Do not assume behavior that is not supported by the documentation.
+* Do not modify files.
+* Do not install packages.
+* Do not run migrations that modify the database.
+* Do not begin Phase 2 or later if Phase 1 is incomplete.
+* Do not claim the project is ready for implementation until you have inspected the actual repository.
+
+Your response should be an analysis/report only.
