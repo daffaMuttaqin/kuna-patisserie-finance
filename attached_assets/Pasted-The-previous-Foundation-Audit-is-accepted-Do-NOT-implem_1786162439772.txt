@@ -1,0 +1,152 @@
+The previous Foundation Audit is accepted.
+
+Do NOT implement Authentication yet.
+
+We now need to resolve ONLY the Replit runtime/environment blockers identified by the audit.
+
+## OBJECTIVE
+
+Make the Replit development environment capable of running this Laravel project without changing the project's documented requirements.
+
+The repository currently requires:
+
+* PHP `^8.3`
+* Laravel `^13.8`
+* Livewire `^4.3`
+* PHPUnit `^12.5.12`
+
+The previous audit found:
+
+* Replit PHP version: `8.2.23`
+* Composer `vendor/` directory is absent
+* `vendor/autoload.php` is absent
+* No `.env` exists in the Replit checkout
+
+## REQUIRED DOCUMENTATION
+
+Before making changes, read:
+
+* PRD.md
+* AI_RULES.md
+* CONTEXT.md
+* README_AI.md
+* TASK_PROTOCOL.md
+* IMPLEMENTATION_PLAN.md
+
+## STRICT SCOPE
+
+This task is ONLY about making the Replit runtime capable of running the existing Laravel project.
+
+Do NOT:
+
+* implement authentication;
+* create authentication routes;
+* create login/logout UI;
+* create controllers or Livewire authentication components;
+* create financial models;
+* create financial migrations;
+* modify financial logic;
+* modify PRD.md;
+* weaken or change the PHP requirement in composer.json;
+* downgrade Laravel;
+* downgrade Livewire;
+* downgrade PHPUnit;
+* replace MariaDB/MySQL requirements;
+* add speculative application dependencies;
+* modify business requirements.
+
+## PHP REQUIREMENT
+
+The project requires PHP `^8.3`.
+
+Do NOT solve the problem by changing composer.json to allow PHP 8.2.
+
+Instead, determine how this Replit environment should use a compatible PHP version.
+
+The target runtime must satisfy the project's existing Composer requirement.
+
+If the current Replit environment cannot be upgraded/configured within the available project/environment controls, STOP and report the exact limitation rather than modifying the project's requirements.
+
+## COMPOSER DEPENDENCIES
+
+Once a compatible PHP runtime is available:
+
+1. Run the appropriate Composer dependency installation for the existing composer.lock.
+2. Do not regenerate or unnecessarily modify composer.lock.
+3. Do not commit the vendor/ directory.
+4. Verify that `vendor/autoload.php` exists.
+5. Verify that Laravel can boot.
+
+## ENVIRONMENT FILE
+
+Do NOT commit `.env`.
+
+If Laravel requires an `.env` file for local Replit execution, create/configure it only as an environment-local file.
+
+Do not copy or expose any developer-local credentials.
+
+Do not attempt to connect Replit to the developer's Windows/XAMPP database.
+
+If a database is needed for running tests, use only an environment-local/test database that is already supported by the project configuration, and do not modify production requirements.
+
+## TESTING
+
+After the runtime is fixed, run:
+
+`php artisan test`
+
+If the tests pass, report the exact result.
+
+If tests fail because the environment lacks a required service or extension, report the exact failure.
+
+Do not modify tests merely to make them pass.
+
+## REPOSITORY CHANGES
+
+Keep repository changes to the absolute minimum.
+
+Prefer environment configuration over application-code changes.
+
+Do not make unrelated cleanup changes.
+
+At the end, report:
+
+### 1. Runtime Before
+
+PHP version and relevant environment state before changes.
+
+### 2. Runtime After
+
+PHP version and relevant environment state after changes.
+
+### 3. Composer
+
+Whether dependencies were successfully installed and whether composer.lock remained unchanged.
+
+### 4. Application Boot
+
+Whether Laravel can boot successfully.
+
+### 5. Tests
+
+Exact test command and result.
+
+### 6. Repository Changes
+
+List every tracked repository file changed.
+
+If no tracked repository files were changed, explicitly state that.
+
+### 7. Remaining Blockers
+
+List only actual remaining blockers.
+
+### 8. Authentication Readiness
+
+Answer only YES or NO:
+
+"Is the Replit environment now ready for the Authentication implementation task?"
+
+Do not implement Authentication.
+
+STOP after this task and wait for further instructions.

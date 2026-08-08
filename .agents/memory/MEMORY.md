@@ -1,0 +1,1 @@
+- [Replit Laravel runtime](replit-laravel-runtime.md) — use a compatible PHP module and an ignored local SQLite runtime when no Replit MySQL service is available.
